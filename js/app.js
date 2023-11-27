@@ -38,40 +38,40 @@ class Persona {
   mostrarGeneracion() {
     if (this.anioNacimiento >= 1994 && this.anioNacimiento <= 2010) {
       alert(
-        `${this.nombre} pertenece a la GENERACION Z y su caracteristica es la IRREVERENCIA.`
+        this.nombre + " pertenece a la GENERACION Z y su caracteristica es la IRREVERENCIA."
       );
     } else if (this.anioNacimiento >= 1981 && this.anioNacimiento <= 1993) {
       alert(
-        `${this.nombre} pertenece a la GENERACION Y y su caracteristica es la FRUSTRACION.`
+        this.nombre + " pertenece a la GENERACION Y y su caracteristica es la FRUSTRACION."
       );
     } else if (this.anioNacimiento >= 1969 && this.anioNacimiento <= 1980) {
       alert(
-        `${this.nombre} pertenece a la GENERACION X y su caracteristica es la OBSESÍON POR EL ÉXITO.`
+        this.nombre + " pertenece a la GENERACION X y su caracteristica es la OBSESÍON POR EL ÉXITO."
       );
     } else if (this.anioNacimiento >= 1949 && this.anioNacimiento <= 1968) {
       alert(
-        `${this.nombre} pertenece a la generacion BABY BOOM y su caracteristica es la AMBICIÓN.`
+        this.nombre + " pertenece a la generacion BABY BOOM y su caracteristica es la AMBICIÓN."
       );
     } else if (this.anioNacimiento >= 1930 && this.anioNacimiento <= 1948) {
       alert(
-        `${this.nombre} pertenece a la generacion SILENT GENERATION y su caracteristica es la AUSTERIDAD.`
+        this.nombre + " pertenece a la generacion SILENT GENERATION y su caracteristica es la AUSTERIDAD."
       );
     }
   }
 
   esMayorDeEdad() {
     if (this.edad >= 18) {
-      alert(`${this.nombre} es mayor de edad`);
+      alert(this.nombre + " es mayor de edad");
     } else {
-      alert(`${this.nombre} es menor de edad`);
+      alert(this.nombre + " es menor de edad");
     }
   }
 
   sexoDif() {
     if (this.sexo === "M" || this.sexo === "m") {
-      return `Mujer`;
+      return "Mujer";
     } else if (this.sexo === "H" || this.sexo === "h") {
-      return `Hombre`;
+      return "Hombre";
     }
   }
 
@@ -88,7 +88,7 @@ class Persona {
   }
 }
 
-const botonEnviar = document.querySelector(`button`);
+const botonEnviar = document.querySelector("button");
 botonEnviar.disabled = true;
 const nombrePersona = document.getElementById("nombrePersona");
 const edadPersona = document.getElementById("edadPersona");
@@ -100,29 +100,29 @@ const anioPersona = document.getElementById("anioPersona");
 const botonMostrarGeneracion = document.getElementById(`btnMostrarGeneracion`); 
 const botonMostrarEdad = document.getElementById(`btnMostrarEdad`);
 
-nombrePersona.addEventListener(`keyup`, () => {
+nombrePersona.addEventListener("keyup", () => {
   validarImputs();
 });
-edadPersona.addEventListener(`keyup`, () => {
+edadPersona.addEventListener("keyup", () => {
   validarImputs();
 });
-dniPersona.addEventListener(`keyup`, () => {
+dniPersona.addEventListener("keyup", () => {
   validarImputs();
 });
-sexoPersona.addEventListener(`keyup`, () => {
+sexoPersona.addEventListener("keyup", () => {
   validarImputs();
 });
-pesoPersona.addEventListener(`keyup`, () => {
+pesoPersona.addEventListener("keyup", () => {
   validarImputs();
 });
-alturaPersona.addEventListener(`keyup`, () => {
+alturaPersona.addEventListener("keyup", () => {
   validarImputs();
 });
-anioPersona.addEventListener(`keyup`, () => {
+anioPersona.addEventListener("keyup", () => {
   validarImputs();
 });
 
-botonEnviar.addEventListener(`click`, () => {
+botonEnviar.addEventListener("click", () => {
   persona = new Persona(
     nombrePersona.value,
     edadPersona.value,
